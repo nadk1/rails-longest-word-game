@@ -1,0 +1,21 @@
+<h1>New Game</h1>
+
+<div class="letters">
+<p><%= @letters[0]%></p>
+<p><%= @letters[1]%></p>
+<p><%= @letters[2]%></p>
+<p><%= @letters[3]%></p>
+<p><%= @letters[4]%></p>
+<p><%= @letters[5]%></p>
+<p><%= @letters[6]%></p>
+<p><%= @letters[7]%></p>
+<p><%= @letters[8]%></p>
+<p><%= @letters[9]%></p>
+</div>
+
+<form action="/score">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="longestWord">What is the longest word you can find?</label>
+  <input type="text" name="word">
+  <input type="submit" value="Play">
+</form>
